@@ -1,0 +1,11 @@
+<mat-accordion *ngIf="values.length > 0">
+  <mat-expansion-panel *ngFor="let value of values">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{value[0]}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p *ngFor="let subvalue of value; index as i">{{ columns[i] }}: {{ subvalue }}</p>
+  </mat-expansion-panel>
+
+</mat-accordion>
